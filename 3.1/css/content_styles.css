@@ -8,6 +8,8 @@
 {
     margin-left: 480px;
     margin-top: -190px;
+    position: relative;
+    z-index: 1000;
 }
 
 .column
@@ -63,8 +65,8 @@
 
 .quote
 {
-    margin-top: 35px;
-    height: 150px;
+    margin-top: 23px;
+    height: 164px;
     vertical-align: middle;
 }
 

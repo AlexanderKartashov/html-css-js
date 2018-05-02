@@ -38,17 +38,17 @@
 
 .header_navigation_item_link.about_link
 {
-    background: transparent url(../images/about_icon.png) 10% 50% no-repeat;
+    background: transparent url(../images/about_icon.png) 15% 50% no-repeat;
 }
 
 .header_navigation_item_link.quote_link
 {
-    background: transparent url(../images/favorites_icon.png) 10% 50% no-repeat;
+    background: transparent url(../images/favorites_icon.png) 15% 50% no-repeat;
 }
 
 .header_navigation_item_link.books_link
 {
-    background: transparent url(../images/video_icon.png) 10% 50% no-repeat;
+    background: transparent url(../images/video_icon.png) 15% 50% no-repeat;
 }
 
 .header_navigation_item_link:link
