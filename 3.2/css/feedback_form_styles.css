@@ -1,0 +1,67 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.feedback_form_container
+{
+    margin-left: 690px;
+}
+
+.feedback_form_title
+{
+    margin-top: 50px;
+    font-size: 36px;
+    line-height: 42px;
+    color: rgb(51,51,51);
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+.feedback_form_title:before, .feedback_form_title:after
+{
+    margin-right: 30px;
+    content: "";
+    width: 205px;
+    background-color: #c4c4c4;
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.feedback_form_title:before
+{
+    margin-right: 30px;
+}
+
+.feedback_form_title:after
+{
+    margin-left: 30px;
+}
+
+.feedback_form_label, .feedback_form_text
+{
+    font-size: 20px;
+    line-height: 32px;
+    color: rgb(51,51,51);
+    font-family: "Open Sans", sans-serif;
+}
+
+.feedback_form_radio_label
+{
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(51,51,51);
+    font-family: "Open Sans", sans-serif;
+}
+
+.feedback_form_select_option, .feedback_form_select
+{
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(85,85,85);
+    font-family: "Open Sans", sans-serif;
+}
