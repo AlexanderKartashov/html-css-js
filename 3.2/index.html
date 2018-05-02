@@ -139,17 +139,26 @@
             <div class="footer_container"></div>
         </div>
         <div class="feedback_form">
-            <h1 class="feedback_form_title">НАПИШИ МНЕ</h1>
+            <p class="feedback_form_title">НАПИШИ МНЕ</p>
             <div class="feedback_form_container">
                 <form action="" method="">
-                    <label class="feedback_form_label required">Ваше имя
-                        <input type="text" name="username" class="feedback_form_input">
-                    </label>
-                    <label class="feedback_form_label required">Ваш email
-                        <input type="email" name="email" class="feedback_form_input">
-                    </label>
-                    <label class="feedback_form_label">Откуда вы?
-                        <select name="country" class="feedback_form_select">
+                    <div class="feedback_form_section input">
+                        <p class="feedback_form_text required">
+                            <label for="username">Ваше имя</label>
+                        </p>
+                        <input required id="username" type="text" name="username" class="feedback_form_input">
+                    </div>
+                    <div class="feedback_form_section input">
+                        <p class="feedback_form_text required">
+                            <label for="email">Ваш email</label>
+                        </p>
+                        <input required id="email" type="email" name="email" class="feedback_form_input">
+                    </div>
+                    <div class="feedback_form_section select">
+                        <p class="feedback_form_text">
+                            <label for="country">Откуда вы?</label>
+                        </p>
+                        <select name="country" class="feedback_form_select" id="country">
                             <option class="feedback_form_select_option" disabled selected>Выберите страну</option>
                             <option value="EN" class="feedback_form_select_option">United Kingdom</option>
                             <option value="US" class="feedback_form_select_option">United States</option>
@@ -157,16 +166,23 @@
                             <option value="SE" class="feedback_form_select_option">Sweden</option>
                             <option value="NE" class="feedback_form_select_option">Netherlands</option>
                         </select>
-                    </label>
-                    <p class="feedback_form_text required">Ваш пол</p>
-                    <input type="radio" name="gender" value="male" id="male" class="feedback_form_radio" checked="checked">
-                    <label id="male" class="feedback_form_radio_label">Мужской</label>
-                    <input type="radio" name="gender" value="female" id="female" class="feedback_form_radio">
-                    <label for="id"  class="feedback_form_radio_label">Женский</label>
-                    <label class="feedback_form_label required">Ваше сообщение</p>
-                    <textarea name="message" class="feedback_form_textarea" rows=5>
-                    </textarea>
-                    <input type="submit" value="Отправить" class="feedback_form_submith">
+                    </div>
+                    <div class="feedback_form_section radio">
+                        <p class="feedback_form_text">Ваш пол</p>
+                        <input type="radio" name="gender" value="male" id="male" class="feedback_form_radio" checked="checked">
+                        <label id="male" class="feedback_form_radio_label">Мужской</label>
+                        <input type="radio" name="gender" value="female" id="female" class="feedback_form_radio">
+                        <label for="id"  class="feedback_form_radio_label">Женский</label>
+                    </div>
+                    <div class="feedback_form_section text_area">
+                        <p class="feedback_form_text required">
+                            <label>Ваше сообщение</label>
+                        </p>
+                        <textarea required name="message" class="feedback_form_textarea" rows=3></textarea>
+                    </div>
+                    <div class="feedback_form_section submit">
+                        <input type="submit" value="Отправить" class="feedback_form_submith">
+                    </div>
                 </form>
             </div>
             <div class="footer_container"></div>

@@ -52,13 +52,6 @@
     font-family: "Georgia", sans-serif;
 }
 
-.header_background
-{
-    z-index: -1;
-    background-color: black;
-    filter: opacity(.5) drop-shadow(0 0 0 black);
-}
-
 .books_hyperlink_container
 {
     clear: both;
@@ -68,16 +61,17 @@
 
 .books_hyperlink
 {
-    margin-top: 60px;
+    vertical-align: middle;
+    margin-top: 59px;
     margin-left: 840px;
-    padding-top: 15px;
+    padding-top: 8px;
     font-size: 19px;
     line-height: 32px;
     color: rgb(245,245,245);
     font-family: "Georgia", sans-serif;
     text-align: center;
     width: 220px;
-    height: 50px;
+    height: 40px;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
