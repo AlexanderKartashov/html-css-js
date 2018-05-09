@@ -1,0 +1,19 @@
+.footer
+{
+    margin-top: 50px;
+    min-height: 70px;
+    background-color: #f5f5f5;
+}
+
+.footer_text
+{
+    font-size: 16px;
+    line-height: 32px;
+    color: rgb(85,85,85);
+    font-family: "Georgia", sans-serif;
+    text-align: center;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
