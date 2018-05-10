@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang=ru>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" type="image/png" href="scripts/jasmine/lib/jasmine-3.1.0/jasmine_favicon.png">
+        <link rel="stylesheet" type="text/css" href="scripts/jasmine/lib/jasmine-3.1.0/jasmine.css">
+        <script type="text/javascript" src="scripts/jasmine/lib/jasmine-3.1.0/jasmine.js"></script>
+        <script type="text/javascript" src="scripts/jasmine/lib/jasmine-3.1.0/jasmine-html.js"></script>
+        <script type="text/javascript" src="scripts/jasmine/lib/jasmine-3.1.0/boot.js"></script>
+        <script type="text/javascript" src="scripts/string_functions.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+          
+          describe("reverseString function", function() {
+            it("should return empty resul if input empty", function() {
+              expect(reverseString('')).toBe('');
+            });
+            
+            it("should reverse chars sequence", function() {
+              expect(reverseString('abcdef')).toBe('fedcba');
+              expect(reverseString('123456789')).toBe('987654321');
+            });
+          });
+          
+          describe("getLastSymbol function", function() {
+            it("should return null, if input is empty", function() {
+              expect(getLastSymbol('')).toBe(null);
+            });
+            
+            it("should return last symbol of nonempty string", function() {
+              expect(getLastSymbol('abcdef')).toBe('f');
+              expect(getLastSymbol('123456789')).toBe('9');
+            });
+          });
+          
+          describe("cutLastSymbol function", function() {
+            it("should return null, if input is empty", function() {
+              expect(cutLastSymbol('')).toBe(null);
+            });
+            
+            it("should return string without last symbol for nonempty string", function() {
+              expect(cutLastSymbol('abcdef')).toBe('abcde');
+              expect(cutLastSymbol('123456789')).toBe('12345678');
+            });
+          });
+          
+          describe("trimBlanks function", function() {
+            it("should return empty string for empty string input", function() {
+              expect(trimBlanks('')).toBe('');
+            });
+            
+            it("should return empty string for whitespace only containing string", function() {
+              expect(trimBlanks(' ')).toBe('');
+              expect(trimBlanks('  ')).toBe('');
+              expect(trimBlanks('   ')).toBe('');
+              expect(trimBlanks('                         ')).toBe('');
+            });
+            
+            it("should trim extra blanks from input string", function() {
+              expect(trimBlanks(' test ')).toBe('test');
+              expect(trimBlanks(' t e s t ')).toBe('t e s t');
+              expect(trimBlanks(' t  e  s   t  ')).toBe('t e s t');
+              expect(trimBlanks(' t e                       s t')).toBe('t e s t');
+            });
+          });
+          
+        </script>
+    </body>
+</html>
