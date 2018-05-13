@@ -1,0 +1,12 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.container:after
+{
+    clear: both;
+    content: "";
+    display: block;
+}
