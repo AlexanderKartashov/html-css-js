@@ -44,6 +44,22 @@ function addOnFocusEventListerner(id, listener) {
   }
 }
 
+// feedback form popup window
+function showPopup(event) {
+  event.preventDefault();
+  var popup = document.getElementById('popup_window');
+  if (popup) {
+    popup.style.display = 'block';
+  }
+}
+
+function hidePopup(event) {
+  var popup = document.getElementById('popup_window');
+  if (popup){
+    popup.style.display = 'none';
+  }
+}
+
 function addOnClickEventListener(id, listener) {
   let button = document.getElementById(id);
   if (button) {
@@ -51,13 +67,22 @@ function addOnClickEventListener(id, listener) {
   }
 }
 
+
 // on load handler
 window.onload = function() {
   // init eventlisteners
   addOnClickEventListener('books_hyperlink', showMoreBooks);
   addOnClickEventListener('feedback_form_submith', validateForm);
+  addOnClickEventListener('feedback_form_hyperlink', showPopup);
+  addOnClickEventListener('close_button', hidePopup);
   
   addOnFocusEventListerner('username', resetStyle);
   addOnFocusEventListerner('email', resetStyle);
   addOnFocusEventListerner('message', resetStyle);
+  
+  window.onclick = function(event){
+    if (event.target == document.getElementById('popup_window')){
+      hidePopup(event);
+    }
+  }
 }

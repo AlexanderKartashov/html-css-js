@@ -1,44 +1,71 @@
-.feedback_form_fields_container
+.popup_window
 {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup_window:hover
+{
+    cursor: pointer;
+}
+
+.feedback_form
+{
+    cursor: default;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 68px;
+    background-color: white;
+    width : 100%;
+    max-width: 660px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.feedback_form_fields
+{
+    margin-top: 35px;
+}
+
+.close_button
+{
+    color: black;
+    float: right;
+    font-size: 60px;
+    margin-top: -33px;
+    margin-right: -35px;
+}
+
+.close_button:hover, .close_button:focus
+{
+    cursor: pointer;
+}
+
+.feedback_form_fields_container
+{
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     max-width: 540px;
 }
 
 .feedback_form_title
 {
     width: auto;
-    margin-top: 45px;
     font-size: 36px;
     line-height: 42px;
     color: rgb(51,51,51);
     font-family: "Open Sans", sans-serif;
-    overflow: hidden;
-    text-align: center;
-}
-
-.feedback_form_title:before, .feedback_form_title:after
-{
-    width: 100%;
-    margin-top: -3px;
-    content: "";
-    max-width: 205px;
-    background-color: #c4c4c4;
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-}
-
-.feedback_form_title:before
-{
-    margin-right: 25px;
-}
-
-.feedback_form_title:after
-{
-    margin-left: 25px;
+    text-align: left;
+    display: inline;
 }
 
 .feedback_form_text
@@ -147,7 +174,7 @@
 .feedback_form_submith
 {
     width: 100%;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
     max-width: 220px;
     height: 50px;
     border-radius: 5px;
@@ -175,11 +202,6 @@
 
 @media screen and (max-width: 750px)
 {
-    .feedback_form_title:before, .feedback_form_title:after
-    {
-        display: none;
-    }
-    
     .feedback_form_fields_container
     {
         margin-right: 4%;
