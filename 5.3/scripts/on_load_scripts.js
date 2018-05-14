@@ -23,6 +23,8 @@ function onLoad(){
   $('#new_book_form_submith').click(addNewBook(requiredNewBookInputs));
   addResetRequiredFormInputsStyles(requiredNewBookInputs);
   $('#add_new_book_link').click(showPopup('#new_book_popup_window'));
+  
+  $('#header_navigation_mobile_button_container').click(mobileMenu);
 }
 
 ///////////////////////////////////////////////////

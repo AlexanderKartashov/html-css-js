@@ -28,6 +28,11 @@
     float: left;
 }
 
+.header_navigation_mobile_menu_title_container
+{
+    display: none;
+}
+
 .header_navigation_item_link
 {
     font-size: 19px;
@@ -57,17 +62,17 @@
 
 .header_navigation_item_link.quote_link
 {
-  background-image: url(../images/favorites_icon.png);
+    background-image: url(../images/favorites_icon.png);
 }
 
 .header_navigation_item_link.books_link
 {
-  background-image: url(../images/video_icon.png);
+    background-image: url(../images/video_icon.png);
 }
 
 .header_navigation_item_link.add_new_book_link
 {
-  background-image: url(../images/add_icon.png);
+    background-image: url(../images/add_icon.png);
 }
 
 .header_navigation_item_link:link
@@ -82,51 +87,138 @@
     background-color: #098d71;
 }
 
-/*
-*   media
-*/
-@media screen and (max-width: 820px)
+.header_navigation_mobile_button_container
 {
-    .header_navigation_item_link_text
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (min-width: 1250px)
+{
+    .header_navigation_items
     {
-        display: none;
-    }
-    
-    .header_navigation_item_link.about_link, .header_navigation_item_link.quote_link,
-    .header_navigation_item_link.books_link, .header_navigation_item_link.add_new_book_link,
-    {
-        background-position: 50% 50%;
-    }
-    
-    .header_navigation_item_link
-    {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        height: 100%;
-        vertical-align: middle;
+        display: block;
     }
 }
 
-@media screen and (max-width: 500px)
+/*
+*   mobile navigarion
+*/
+@media screen and (max-width: 1250px)
 {
-    .header_navigation_item_link_text
+    .header_navigation
+    {
+        background-color: white;
+        height: 50px;
+    }
+  
+    .header_navigation_items
     {
         display: none;
+        width: 100%;
+        background-color: white;
+        position: relative;
+        z-index: 1000;
+    }
+  
+    .header_navigation_mobile_menu_title_container
+    {
+        display: block;
+        float: left;
+        margin-left: 18px;
+    }
+  
+    .header_navigation_mobile_menu_title
+    {
+        margin-top: 10px;
+        vertical-align: middle;
+        font-size: 19px;
+        line-height: 32px;
+        color: rgb(51,51,51);
+        font-family: "Georgia", sans-serif;
+        font-weight: normal;
+    }
+  
+    .header_navigation_item_link_container:hover
+    {
+        background-color: #f0f0f0;
+    }
+  
+    .header_navigation_mobile_button_container
+    {
+        padding-left: 13px;
+        padding-top: 13px;
+        display: block;
+        float: left;
+        max-width: 100%;
+    }
+
+    .bar1, .bar2, .bar3 
+    {
+        width: 24px;
+        height: 2px;
+        background-color: #333;
+        margin-top: 0px;
+        margin-bottom: 8px;
+        margin-left: 0px;
+        margin-right: 0px;
+        transition: 0.5s;
+    }
+
+    /* Rotate first bar */
+    .change .bar1
+    {
+        -webkit-transform: rotate(-45deg) translate(-7px, 7px) scale(1.3, 1.3);
+        transform: rotate(-45deg) translate(-7px, 7px) scale(1.3, 1.3);
+    }
+
+    /* Fade out the second bar */
+    .change .bar2
+    {
+        opacity: 0;
+    }
+
+    /* Rotate last bar */
+    .change .bar3
+    {
+        -webkit-transform: rotate(45deg) translate(-7px, -7px) scale(1.3, 1.3);
+        transform: rotate(45deg) translate(-7px, -7px) scale(1.3, 1.3);
+    }
+  
+    .header_navigation_item_link_container
+    {
+        width: 100%;
+        height: 50px;
+        clear: both;
+        display: block;
     }
     
-    .header_navigation_item_link.about_link, .header_navigation_item_link.quote_link,
-    .header_navigation_item_link.books_link, .header_navigation_item_link.add_new_book_link
+    .header_navigation_item_link.about_link
     {
-        background-position: 30% 50%;
+        background-image: none;
+    }
+  
+    .header_navigation_item_link.quote_link
+    {
+        background-image: none;
+    }
+  
+    .header_navigation_item_link.books_link
+    {
+        background-image: none;
+    }
+  
+    .header_navigation_item_link.add_new_book_link
+    {
+        background-image: none;
     }
     
     .header_navigation_item_link
     {
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-top: 0px;
-        padding-bottom: 0px;
         height: 100%;
         vertical-align: middle;
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
     }
 }
